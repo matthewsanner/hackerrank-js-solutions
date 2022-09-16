@@ -1,5 +1,6 @@
-//adds two values test conflict
+//adds two values
 
 function solveMeFirst(a, b) { 
+    console.log(a+b);
     return a+b;
 }
