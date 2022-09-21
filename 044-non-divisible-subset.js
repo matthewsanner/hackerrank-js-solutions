@@ -12,7 +12,7 @@ function nonDivisibleSubset(k, s) {
     }
     //if k is an even number then there exists a set of numbers with remainder k/2, if we have any of these numbers in our array set then we only want to take one of them for the maximal set because combos of those will create numbers that are evenly divisible by k, if there are 0 there are none to take
     if (k % 2 == 0 && remainders[k / 2] !== 0) {
-        result += 1
+        result += 1;
     }
     //the rest of the numbers in the array exist in pair sets with matching remainders (ie: if k=7 then 1 and 6, 2 and 5, 3 and 4), because we are looking for the maximal set we choose numbers within each pair that have greater representation (ie: if more numbers have remainder 1 than remainder 6, we include the numbers that have remainder 1), those numbers can be added together with each other as well as any other numbers in the array (except their matching pair numbers) without creating numbers that are evenly divisible by k
     for (let i = 1; i < k / 2; i++) {
