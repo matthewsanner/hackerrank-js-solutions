@@ -2,7 +2,7 @@
 
 function nonDivisibleSubset(k, s) {
     //creates remainder array of length k where each entry starts at 0
-    const remainders = new Array(k).fill(0);
+    let remainders = new Array(k).fill(0);
     //tallies in remainder array the remainder of each number in array s when divided by k, where the first array entry is for remainder 0 and so on up to k-1
     s.forEach(num => remainders[num % k]++);
     let result = 0;
