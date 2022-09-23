@@ -9,7 +9,7 @@ function appendAndDelete(s, t, k) {
             return 'No';
     }
     else {
-        for (let i=0; i<s.length || i<t.length; i++){
+        for (let i=0; i<s.length && i<t.length; i++){
             if (s[i]==t[i]){
                 counter+=1;
             }
