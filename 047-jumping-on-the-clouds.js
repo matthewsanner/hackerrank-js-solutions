@@ -5,13 +5,10 @@ function jumpingOnClouds(c) {
     let counter = 0;
     while (i < c.length - 1) {
         if (c[i + 2] == 0) {
-            counter += 1
-            i += 2
+            i++
         }
-        else {
-            counter += 1
-            i += 1
-        }
+        i++
+        counter += 1
     }
     return counter;
 }
