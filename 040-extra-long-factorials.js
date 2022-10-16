@@ -5,5 +5,5 @@ function extraLongFactorials(n) {
     for (let i=BigInt(n); i>1; i--) {
         answer*=i;
     }
-    console.log (answer.toString());
+    console.log(answer.toString());
 }
