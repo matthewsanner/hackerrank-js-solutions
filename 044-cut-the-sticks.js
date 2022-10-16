@@ -2,7 +2,6 @@
 
 //brute force answer
 /*function cutTheSticks(arr) {
-    // Write your code here
     let answer= [];
     while (arr.length>0) {
         answer.push(arr.length);
