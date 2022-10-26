@@ -18,5 +18,7 @@ function plusMinus(arr) {
   let newZero = zero / arr.length;
   console.log(newPositive.toFixed(6)); 
   console.log(newNegative.toFixed(6)); 
-  console.log(newZero.toFixed(6)); 
-}
+  console.log(newZero.toFixed(6));
+};
+
+
