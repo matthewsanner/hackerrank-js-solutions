@@ -10,3 +10,8 @@ function findDigits(n) {
     }
     return answer;
 }
+
+//clever one-liner
+// function findDigits(n) {
+//     return n.toString().split('').filter((digit) => n % digit == 0).length;
+// }

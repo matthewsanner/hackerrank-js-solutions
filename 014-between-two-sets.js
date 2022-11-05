@@ -1,4 +1,4 @@
-//Determines numbers that are factorable by numbers in the first array and are factors of numbers in the second array
+//Determines numbers 1-100 that are factorable by all numbers in the first array and are factors of all numbers in the second array
 
 function getTotalX(a, b) {
     let validCount = 0;
