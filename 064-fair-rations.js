@@ -3,12 +3,14 @@
 function fairRations(B) {
     let loaves = 0;
     for (let i = 0; i < B.length - 1; i++) {
-        if (B[i] % 2 === 1) {
-            B[i] = B[i] + 1;
-            B[i + 1] = B[i + 1] + 1;
+        if (B[i] % 2 == 1) {
+            B[i]++;
+            B[i + 1]++;
             loaves += 2;
         }
     }
-    if (B[B.length - 1] % 2 === 1) return 'NO';
+    if (B[B.length - 1] % 2 == 1) return 'NO';
     else return loaves;
+    // ternary option
+    // return B[B.length-1] % 2 == 1 ? 'NO' : loaves
 }
