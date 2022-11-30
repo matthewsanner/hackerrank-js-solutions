@@ -7,7 +7,7 @@ function gridSearch(G, P) {
             if (G[i].includes(P[0], j)) {
                 startIndex = G[i].indexOf(P[0], j)
                 for (let k = 1; k < P.length; k++) {
-                    if (G[i + k].includes(P[k], startIndex) == false || G[i + k].indexOf(P[k], startIndex) !== startIndex) {
+                    if (G[i + k].indexOf(P[k], startIndex) !== startIndex) {
                         break;
                     } else {
                         if (k == P.length - 1) {
