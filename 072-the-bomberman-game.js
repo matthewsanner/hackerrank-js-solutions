@@ -32,15 +32,12 @@ function gridAfterExplosion(grid) {
         if (cell[0] - 1 >= 0) {
             finalDetonatedSpots.push([cell[0] - 1, cell[1]]);
         }
-
         if (cell[0] + 1 < grid.length) {
             finalDetonatedSpots.push([cell[0] + 1, cell[1]]);
         }
-
         if (cell[1] - 1 >= 0) {
             finalDetonatedSpots.push([cell[0], cell[1] - 1]);
         }
-
         if (cell[1] + 1 < grid[0].length) {
             finalDetonatedSpots.push([cell[0], cell[1] + 1]);
         }
