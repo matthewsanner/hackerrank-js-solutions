@@ -1,5 +1,4 @@
 // Determines the state of a grid of bombs at a particular instant, n in seconds, given an initial grid of bombs at n=0 that stays the same at n=1. Cells in the grid are either a bomb or they are empty. Bombs explode after three seconds. Bomberman places bombs in all empty spaces at every even number n.
-
 function bomberMan(n, grid) {
     // if n is 1 the grid is same as initially given grid
     if (n == 1) return grid;
@@ -18,7 +17,7 @@ function gridAfterExplosion(grid) {
     for (let row = 0; row < grid.length; row++) {
         for (let col = 0; col < grid[0].length; col++) {
             if (grid[row].charAt(col) == 'O') {
-                initialBombSpots.push([row, col])
+                initialBombSpots.push([row, col]);
             }
         }
     }
@@ -30,26 +29,24 @@ function gridAfterExplosion(grid) {
     // cell[0] is row index, cell[1] is column index
     initialBombSpots.forEach(cell => {
         if (cell[0] - 1 >= 0) {
-            finalDetonatedSpots.push([cell[0] - 1, cell[1]]);
+            detonatedSpots.push([cell[0] - 1, cell[1]]);
         }
         if (cell[0] + 1 < grid.length) {
-            finalDetonatedSpots.push([cell[0] + 1, cell[1]]);
+            detonatedSpots.push([cell[0] + 1, cell[1]]);
         }
         if (cell[1] - 1 >= 0) {
-            finalDetonatedSpots.push([cell[0], cell[1] - 1]);
+            detonatedSpots.push([cell[0], cell[1] - 1]);
         }
         if (cell[1] + 1 < grid[0].length) {
-            finalDetonatedSpots.push([cell[0], cell[1] + 1]);
+            detonatedSpots.push([cell[0], cell[1] + 1]);
         }
     })
 
     // creates grid full of just bombs
     let fullGrid = grid.map(row => row.replace(/./g, 'O'));
     // starting with full bomb grid, replaces spots which are to be detonated/empty with '.'
-    finalDetonatedSpots.forEach(([row, col]) => {
-        if (fullGrid[row].charAt(col) == 'O') {
-            fullGrid[row] = fullGrid[row].substring(0, col) + '.' + fullGrid[row].substring(col + 1);
-        }
+    detonatedSpots.forEach(([row, col]) => {
+        fullGrid[row] = fullGrid[row].substring(0, col) + '.' + fullGrid[row].substring(col + 1);
     })
 
     // full grid is now final grid with detonated spots and remaining bombs

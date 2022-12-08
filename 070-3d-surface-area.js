@@ -7,28 +7,28 @@ function surfaceArea(A) {
         for (let j = 0; j < A[0].length; j++) {
             // adds front and back sides if exposed
             if (i == 0 || i == A.length - 1) {
-                surfaceArea += A[i][j]
+                surfaceArea += A[i][j];
                 // for edge case where only one row add again
                 if (A.length == 1) {
-                    surfaceArea += A[i][j]
+                    surfaceArea += A[i][j];
                 }
             }
             // adds left and right sides if exposed
             if (j == 0 || j == A[0].length - 1) {
-                surfaceArea += A[i][j]
+                surfaceArea += A[i][j];
                 // for edge case where only one column add again
                 if (A[0].length == 1) {
-                    surfaceArea += A[i][j]
+                    surfaceArea += A[i][j];
                 }
             }
             // interior sides
-            // adds differences along rows
-            if (i < A.length - 1) {
-                surfaceArea += Math.abs(A[i][j] - A[i + 1][j])
-            }
             // adds differences along columns
+            if (i < A.length - 1) {
+                surfaceArea += Math.abs(A[i][j] - A[i + 1][j]);
+            }
+            // adds differences along rows
             if (j < A[0].length - 1) {
-                surfaceArea += Math.abs(A[i][j] - A[i][j + 1])
+                surfaceArea += Math.abs(A[i][j] - A[i][j + 1]);
             }
         }
     }
